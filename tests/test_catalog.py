@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import importlib.util
 import json
 import unittest
@@ -50,6 +51,23 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_matches(self):
         self.assertEqual((ROOT / "README.md").read_text(), CATALOG.render(self.data))
+
+    def test_license_guide_matches_existing_source_scope(self):
+        guide = (ROOT / "LICENSING.md").read_text()
+        self.assertIn("Titans of Mars remains MIT/open source", guide)
+        self.assertIn("Previously MIT-licensed material remains usable and hostable under MIT", guide)
+        self.assertIn("Eight other catalog games do not yet", guide)
+        for game in self.data["games"]:
+            if game["source_url"] is not None:
+                self.assertIn(game["source_url"], guide)
+        self.assertEqual(guide.count("/blob/main/LICENSING.md"), 5)
+        self.assertNotIn("/Users/", guide)
+        self.assertIn("[Licensing](LICENSING.md)", CATALOG.render(self.data))
+
+    def test_reference_license_is_exact_approved_text(self):
+        approved = (ROOT / "FORGE-GAME-HOSTING-LICENSE-1.0.txt").read_bytes()
+        self.assertEqual(hashlib.sha256(approved).hexdigest(),
+                         "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf")
 
     def test_verified_transfer_can_be_recorded(self):
         game = self.data["games"][9]
