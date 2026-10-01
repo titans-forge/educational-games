@@ -23,9 +23,11 @@ not need that separate hosting agreement under these community terms.
 
 ## Published GitHub source repositories
 
-The following six source repositories now identify Forge Game Hosting License
-1.0 as their current project policy. Each includes a licensing checkpoint and
-the original MIT notice retained byte-for-byte as `LICENSE-LEGACY-MIT.txt`.
+The following eleven source repositories now identify Forge Game Hosting License
+1.0 as their current project policy. Each includes a licensing checkpoint.
+Where an original root MIT notice was identified, it is retained byte-for-byte
+as `LICENSE-LEGACY-MIT.txt`. No notice is fabricated where one was not found;
+that absence does not establish that no earlier permission grant exists.
 
 | Game | Source licensing checkpoint | Adoption commit |
 | --- | --- | --- |
@@ -35,6 +37,11 @@ the original MIT notice retained byte-for-byte as `LICENSE-LEGACY-MIT.txt`.
 | Titans of War: Ashes of Nika | [FG-LIC-20260930-09-GH1](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/blob/main/LICENSING.md) | [2582c6d](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/commit/2582c6ddc4cecd46de24e76292df554994703272) |
 | Titans of War: Rise of Rome | [FG-LIC-20260930-07-GH1](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/blob/main/LICENSING.md) | [d767f1f](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/commit/d767f1fedbc927e4e1809e90b8f5e3f2eeafe72e) |
 | Titans of War: Revolution | [FG-LIC-20260930-04-GH1](https://github.com/titans-forge/Titans-of-War-Revolution/blob/main/LICENSING.md) | [56c0729](https://github.com/titans-forge/Titans-of-War-Revolution/commit/56c07290c27fa15267653d60c438114d9b53b3d2) |
+| Titans of Nature: Living Waters | [FG-LIC-20260930-01-GH1](https://github.com/titans-forge/Titans-of-Nature-Living-Waters/blob/main/LICENSING.md) | [bb02c40](https://github.com/titans-forge/Titans-of-Nature-Living-Waters/commit/bb02c404d945d7ca1afbb642983619aeb750a2c3) |
+| Titans of Luna | [FG-LIC-20260930-08-GH1](https://github.com/titans-forge/Titans-of-Luna/blob/main/LICENSING.md) | [dc9cdbd](https://github.com/titans-forge/Titans-of-Luna/commit/dc9cdbdbf511eae7100ce66e337c99d927125f15) |
+| Build a Republic | [FG-LIC-20260930-11-GH1](https://github.com/titans-forge/Build-a-Republic/blob/main/LICENSING.md) | [8980008](https://github.com/titans-forge/Build-a-Republic/commit/8980008f498522e4f8d2aa897777000d493a9713) |
+| Crossroads: The Silk Roads | [FG-LIC-20260930-02-GH1](https://github.com/titans-forge/Crossroads-The-Silk-Roads/blob/main/LICENSING.md) | [f8f196c](https://github.com/titans-forge/Crossroads-The-Silk-Roads/commit/f8f196ca05565cf432f7a45f13469411f88a5d74) |
+| Titans of War: Caesar | [FG-LIC-20260930-06-GH1](https://github.com/titans-forge/Titans-of-War-Caesar/blob/main/LICENSING.md) | [e5b4409](https://github.com/titans-forge/Titans-of-War-Caesar/commit/e5b4409d8881f6301ec9888cf59ad5691a9bf18f) |
 
 These four Titans of War repositories completed native GitHub transfers to
 `titans-forge` on September 30, 2026. Repository identity, existing history,
@@ -46,8 +53,23 @@ transferred or relicensed. Revolution's clean upgraded-edition source was
 subsequently published with the owner's approval, under the Forge release
 policy. Its migration adds no gameplay changes: the upgrades preceded this
 publication. All 65 original application/media members were verified against
-the recorded itch build; licensing notices were checked separately. Caesar's
-source remains unpublished pending generated-image provider/account confirmation.
+the recorded itch build; licensing notices were checked separately.
+
+Living Waters 1.4.0, Luna and Build a Republic 0.1.0 were subsequently published
+as clean, history-free source exports. All selected original gameplay and media
+files remained unchanged; comparisons with the recorded itch archives matched
+58/58, 7/7 and 3/3 application/media members respectively. Luna's revised README
+is documentation, not part of the 7-member gameplay/media comparison. Licensing
+and dependency notices were checked separately. These are bounded artifact
+comparisons, not a claim that every source branch or future itch upload matches.
+Crossroads 0.3.1 and Caesar 0.2.0 were then published after the owner confirmed
+that the relevant generated images were made through the owner's Titans
+Forge-controlled OpenAI/Codex account. Each source export retains that public
+attestation without private generation transcripts or invented generation dates.
+Their original application/media comparisons matched 13/13 and 37/37 members
+respectively. Provider terms and procedural-atlas notices remain separate;
+the attestation is not an independent copyright certification.
+Proxima and Medical Mysteries still require locating the original source projects.
 
 **Previously MIT-licensed material remains usable and hostable under MIT.**
 This policy/documentation change does not retroactively revoke those grants,
@@ -60,7 +82,7 @@ notice does not automatically MIT-license future additions. Newly supplied
 Forge-covered game changes need an identifiable release boundary.
 The restricted policy is source-available, not an OSI-approved open-source licence.
 
-Seven other catalog games do not yet have listed public source repositories.
+Two other catalog games do not yet have listed public source repositories.
 This guide does not claim they have been published or migrated. Listed GitHub
 branches have not been certified to match the currently hosted itch builds.
 
