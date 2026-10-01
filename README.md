@@ -4,7 +4,7 @@ Play on itch. Discover the source, discuss the ideas, and help improve the games
 
 [Play the collection](https://titans-forge.itch.io/) · [Educator guide](EDUCATOR_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [Licensing](LICENSING.md)
 
-This catalog lists 14 browser games. Source publication is being prepared in batches. 2 related repositories currently remain under JCapone83; 10 game source repositories are listed under titans-forge. Listed source branches have not been certified to match the current itch builds.
+This catalog lists 14 browser games. All fourteen games now have listed public repositories; recovery scope varies by game. 1 related repositories currently remain under JCapone83; 13 game source repositories are listed under titans-forge. Listed source branches have not been certified to match every future or currently hosted itch build.
 
 ## History and civics
 
@@ -29,16 +29,18 @@ This catalog lists 14 browser games. Source publication is being prepared in bat
 
 | Game | Explore | Play | Source |
 | --- | --- | --- | --- |
-| Titans of Proxima | A space-settlement game for exploring decisions beyond our solar system. | [Play](https://titans-forge.itch.io/titans-of-proxima) | Being prepared |
+| Titans of Proxima | Manage a fictional Earth-Luna-Mars charter through infrastructure, research and launch windows. | [Play](https://titans-forge.itch.io/titans-of-proxima) | [Source](https://github.com/titans-forge/Titans-of-Proxima) |
 | Titans of Luna | Build a lunar colony while balancing power, water, oxygen, food, and crew survival. | [Play](https://titans-forge.itch.io/titans-of-luna) | [Source](https://github.com/titans-forge/Titans-of-Luna) |
 | Titans of Mars | Explore the resource and infrastructure trade-offs of a settlement on Mars. | [Play](https://titans-forge.itch.io/titans-of-mars) | [Source](https://github.com/JCapone83/Titans-of-Mars) |
-| Ares: The Mars Survival Simulator | Explore survival and resource management on Mars; distinct from Titans of Mars. | [Play](https://titans-forge.itch.io/ares-the-mars-survival-simulator) | [Source](https://github.com/JCapone83/ares-strategy-engine) |
+| Ares: The Mars Survival Simulator | Explore survival and resource management on Mars; distinct from Titans of Mars. | [Play](https://titans-forge.itch.io/ares-the-mars-survival-simulator) | [Source](https://github.com/titans-forge/ares-strategy-engine) |
 
 ## Medical reasoning
 
 | Game | Explore | Play | Source |
 | --- | --- | --- | --- |
-| Medical Mysteries | Explore medical reasoning through game scenarios; not a clinical tool or medical advice. | [Play](https://titans-forge.itch.io/medical-mysteries) | Being prepared |
+| Medical Mysteries | Fictional investigations; recovered published beta, not a clinical tool or medical advice. | [Play](https://titans-forge.itch.io/medical-mysteries) | [Source](https://github.com/titans-forge/Medical-Mysteries) |
+
+Medical Mysteries is an exact native-JavaScript recovery of its published beta, not the missing original authoring workspace, generators or test suite. Its README documents that boundary. Proxima's existing charter concerns Luna and Mars, not an actual Proxima mission.
 
 ## Use thoughtfully
 

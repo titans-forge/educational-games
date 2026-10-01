@@ -29,7 +29,8 @@ class CatalogTests(unittest.TestCase):
             CATALOG.validate(self.data)
 
     def test_unpublished_source_rejected(self):
-        game = next(game for game in self.data["games"] if game["source_status"] == "preparing")
+        game = self.data["games"][0]
+        game["source_status"] = "preparing"
         game["source_url"] = "https://github.com/titans-forge/not-published"
         with self.assertRaises(ValueError):
             CATALOG.validate(self.data)
@@ -57,11 +58,11 @@ class CatalogTests(unittest.TestCase):
         guide = (ROOT / "LICENSING.md").read_text()
         self.assertIn("Titans of Mars remains MIT/open source", guide)
         self.assertIn("Previously MIT-licensed material remains usable and hostable under MIT", guide)
-        self.assertIn("Two other catalog games do not yet", guide)
+        self.assertIn("All fourteen catalog games now", guide)
         for game in self.data["games"]:
             if game["source_url"] is not None:
                 self.assertIn(game["source_url"], guide)
-        self.assertEqual(guide.count("/blob/main/LICENSING.md"), 11)
+        self.assertEqual(guide.count("/blob/main/LICENSING.md"), 13)
         self.assertIn("upgrades not already granted under other terms", guide)
         self.assertIn("does not automatically MIT-license future additions", guide)
         self.assertNotIn("/Users/", guide)
@@ -74,10 +75,14 @@ class CatalogTests(unittest.TestCase):
 
     def test_verified_transfer_can_be_recorded(self):
         game = self.data["games"][12]
+        game["source_status"] = "existing_personal_repository"
+        game["source_url"] = "https://github.com/JCapone83/ares-strategy-engine"
+        self.assertIn("2 related repositories", CATALOG.render(self.data))
+        self.assertIn("12 game source repositories", CATALOG.render(self.data))
         game["source_status"] = "forge_repository"
         game["source_url"] = "https://github.com/titans-forge/ares-strategy-engine"
         self.assertIn("1 related repositories", CATALOG.render(self.data))
-        self.assertIn("11 game source repositories", CATALOG.render(self.data))
+        self.assertIn("13 game source repositories", CATALOG.render(self.data))
 
     def test_completed_source_publication_scope(self):
         expected = {
@@ -91,6 +96,9 @@ class CatalogTests(unittest.TestCase):
             "build-a-republic": "Build-a-Republic",
             "crossroads-the-silk-roads": "Crossroads-The-Silk-Roads",
             "titans-of-war-caesar": "Titans-of-War-Caesar",
+            "titans-of-proxima": "Titans-of-Proxima",
+            "medical-mysteries": "Medical-Mysteries",
+            "ares": "ares-strategy-engine",
         }
         games = {game["id"]: game for game in CATALOG.validate(self.data)}
         self.assertEqual(
@@ -99,11 +107,17 @@ class CatalogTests(unittest.TestCase):
         )
         for game_id, repository in expected.items():
             self.assertEqual(games[game_id]["source_url"], f"https://github.com/titans-forge/{repository}")
-        for game_id in ("titans-of-mars", "ares"):
+        for game_id in ("titans-of-mars",):
             self.assertEqual(games[game_id]["source_status"], "existing_personal_repository")
-        self.assertEqual(sum(game["source_status"] == "preparing" for game in games.values()), 2)
-        self.assertIn("2 related repositories", CATALOG.render(self.data))
-        self.assertIn("10 game source repositories", CATALOG.render(self.data))
+        self.assertEqual(sum(game["source_status"] == "preparing" for game in games.values()), 0)
+        self.assertIn("1 related repositories", CATALOG.render(self.data))
+        self.assertIn("13 game source repositories", CATALOG.render(self.data))
+
+    def test_medical_recovery_and_proxima_scope_are_explicit(self):
+        rendered = CATALOG.render(self.data)
+        self.assertIn("not the missing original authoring workspace", rendered)
+        self.assertIn("not an actual Proxima mission", rendered)
+        self.assertIn("case JSONL inputs, generators and tests were not recovered", (ROOT / "LICENSING.md").read_text())
 
 
 if __name__ == "__main__":

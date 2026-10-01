@@ -23,7 +23,7 @@ not need that separate hosting agreement under these community terms.
 
 ## Published GitHub source repositories
 
-The following eleven source repositories now identify Forge Game Hosting License
+The following thirteen game repositories now identify Forge Game Hosting License
 1.0 as their current project policy. Each includes a licensing checkpoint.
 Where an original root MIT notice was identified, it is retained byte-for-byte
 as `LICENSE-LEGACY-MIT.txt`. No notice is fabricated where one was not found;
@@ -31,7 +31,7 @@ that absence does not establish that no earlier permission grant exists.
 
 | Game | Source licensing checkpoint | Adoption commit |
 | --- | --- | --- |
-| Ares: The Mars Survival Simulator | [FG-LIC-20260930-12-GH1](https://github.com/JCapone83/ares-strategy-engine/blob/main/LICENSING.md) | [a91cecc](https://github.com/JCapone83/ares-strategy-engine/commit/a91ceccf8d11fc9d1293be8a317b94499743dbad) |
+| Ares: The Mars Survival Simulator | [FG-LIC-20260930-12-GH1](https://github.com/titans-forge/ares-strategy-engine/blob/main/LICENSING.md) | [a91cecc](https://github.com/titans-forge/ares-strategy-engine/commit/a91ceccf8d11fc9d1293be8a317b94499743dbad) |
 | Titans of War: Civil War | [FG-LIC-20260930-13-GH1](https://github.com/titans-forge/Titans_of_War/blob/main/LICENSING.md) | [bbece6a](https://github.com/titans-forge/Titans_of_War/commit/bbece6a6db8b97274bf0f0a74d776609dfd64e85) |
 | Titans of War: Rome Reconquest | [FG-LIC-20260930-10-GH1](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/blob/main/LICENSING.md) | [8224b14](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/commit/8224b1475860e3d40ec975496e58521b2c47429f) |
 | Titans of War: Ashes of Nika | [FG-LIC-20260930-09-GH1](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/blob/main/LICENSING.md) | [2582c6d](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/commit/2582c6ddc4cecd46de24e76292df554994703272) |
@@ -42,14 +42,17 @@ that absence does not establish that no earlier permission grant exists.
 | Build a Republic | [FG-LIC-20260930-11-GH1](https://github.com/titans-forge/Build-a-Republic/blob/main/LICENSING.md) | [8980008](https://github.com/titans-forge/Build-a-Republic/commit/8980008f498522e4f8d2aa897777000d493a9713) |
 | Crossroads: The Silk Roads | [FG-LIC-20260930-02-GH1](https://github.com/titans-forge/Crossroads-The-Silk-Roads/blob/main/LICENSING.md) | [f8f196c](https://github.com/titans-forge/Crossroads-The-Silk-Roads/commit/f8f196ca05565cf432f7a45f13469411f88a5d74) |
 | Titans of War: Caesar | [FG-LIC-20260930-06-GH1](https://github.com/titans-forge/Titans-of-War-Caesar/blob/main/LICENSING.md) | [e5b4409](https://github.com/titans-forge/Titans-of-War-Caesar/commit/e5b4409d8881f6301ec9888cf59ad5691a9bf18f) |
+| Titans of Proxima | [FG-LIC-20260930-03-GH1](https://github.com/titans-forge/Titans-of-Proxima/blob/main/LICENSING.md) | [f89f578](https://github.com/titans-forge/Titans-of-Proxima/commit/f89f578ba1f85efdca999f8be97487616dc702b0) |
+| Medical Mysteries (published beta recovery) | [FG-LIC-20260930-05-GH1](https://github.com/titans-forge/Medical-Mysteries/blob/main/LICENSING.md) | [e012405](https://github.com/titans-forge/Medical-Mysteries/commit/e0124052a8d77b50b21d67797267a7314cebc5cb) |
 
 These four Titans of War repositories completed native GitHub transfers to
 `titans-forge` on September 30, 2026. Repository identity, existing history,
 tags, release assets and licensing checkpoint files were verified unchanged at
 transfer. Current source links use the Forge locations; historical checkpoint
 records retain the owner name recorded when the checkpoint was created.
-Ares remains at its listed personal-account location. Titans of Mars was not
-transferred or relicensed. Revolution's clean upgraded-edition source was
+Ares subsequently completed its native transfer to Titans Forge, with the same
+repository identity, head/tree, tags and licensing files verified before canonical
+metadata updates. Titans of Mars was not transferred or relicensed. Revolution's clean upgraded-edition source was
 subsequently published with the owner's approval, under the Forge release
 policy. Its migration adds no gameplay changes: the upgrades preceded this
 publication. All 65 original application/media members were verified against
@@ -69,7 +72,14 @@ attestation without private generation transcripts or invented generation dates.
 Their original application/media comparisons matched 13/13 and 37/37 members
 respectively. Provider terms and procedural-atlas notices remain separate;
 the attestation is not an independent copyright certification.
-Proxima and Medical Mysteries still require locating the original source projects.
+Proxima 1.0.0 was then published from its located original source. All 21/21
+application/media members matched the recorded itch archive after a clean build.
+Medical Mysteries was published as an exact native-JavaScript recovery of its
+September 13 v2 beta; 92/92 original archive members remain unchanged, including
+its credits and historical release manifest. Its original authoring workspace,
+case JSONL inputs, generators and tests were not recovered. New static checks are
+packaging/syntax checks, not original tests or clinical validation. Synthetic art
+and the AI-audited/not independently clinically reviewed notices remain explicit.
 
 **Previously MIT-licensed material remains usable and hostable under MIT.**
 This policy/documentation change does not retroactively revoke those grants,
@@ -82,9 +92,9 @@ notice does not automatically MIT-license future additions. Newly supplied
 Forge-covered game changes need an identifiable release boundary.
 The restricted policy is source-available, not an OSI-approved open-source licence.
 
-Two other catalog games do not yet have listed public source repositories.
-This guide does not claim they have been published or migrated. Listed GitHub
-branches have not been certified to match the currently hosted itch builds.
+All fourteen catalog games now have listed public repositories. Thirteen are under
+Titans Forge; Titans of Mars remains at its intentionally unchanged MIT repository. Exact comparisons
+above refer to frozen recorded archives, not every current or future hosted build.
 
 ## Scope of this catalog
 
