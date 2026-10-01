@@ -21,9 +21,9 @@ excluded as defined in the full terms. Companies at or below the threshold do
 not need that separate hosting agreement under these community terms.
 [Commercial inquiries](https://titans-forge.itch.io/).
 
-## Existing GitHub source repositories
+## Published GitHub source repositories
 
-The following five source repositories now identify Forge Game Hosting License
+The following six source repositories now identify Forge Game Hosting License
 1.0 as their current project policy. Each includes a licensing checkpoint and
 the original MIT notice retained byte-for-byte as `LICENSE-LEGACY-MIT.txt`.
 
@@ -34,6 +34,7 @@ the original MIT notice retained byte-for-byte as `LICENSE-LEGACY-MIT.txt`.
 | Titans of War: Rome Reconquest | [FG-LIC-20260930-10-GH1](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/blob/main/LICENSING.md) | [8224b14](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/commit/8224b1475860e3d40ec975496e58521b2c47429f) |
 | Titans of War: Ashes of Nika | [FG-LIC-20260930-09-GH1](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/blob/main/LICENSING.md) | [2582c6d](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/commit/2582c6ddc4cecd46de24e76292df554994703272) |
 | Titans of War: Rise of Rome | [FG-LIC-20260930-07-GH1](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/blob/main/LICENSING.md) | [d767f1f](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/commit/d767f1fedbc927e4e1809e90b8f5e3f2eeafe72e) |
+| Titans of War: Revolution | [FG-LIC-20260930-04-GH1](https://github.com/titans-forge/Titans-of-War-Revolution/blob/main/LICENSING.md) | [56c0729](https://github.com/titans-forge/Titans-of-War-Revolution/commit/56c07290c27fa15267653d60c438114d9b53b3d2) |
 
 These four Titans of War repositories completed native GitHub transfers to
 `titans-forge` on September 30, 2026. Repository identity, existing history,
@@ -41,16 +42,25 @@ tags, release assets and licensing checkpoint files were verified unchanged at
 transfer. Current source links use the Forge locations; historical checkpoint
 records retain the owner name recorded when the checkpoint was created.
 Ares remains at its listed personal-account location. Titans of Mars was not
-transferred or relicensed. Revolution and Caesar still await source publication.
+transferred or relicensed. Revolution's clean upgraded-edition source was
+subsequently published with the owner's approval, under the Forge release
+policy. Its migration adds no gameplay changes: the upgrades preceded this
+publication. All 65 original application/media members were verified against
+the recorded itch build; licensing notices were checked separately. Caesar's
+source remains unpublished pending generated-image provider/account confirmation.
 
 **Previously MIT-licensed material remains usable and hostable under MIT.**
 This policy/documentation change does not retroactively revoke those grants,
 make identical MIT code exclusive, or introduce a gameplay upgrade. Existing
 copyright, third-party, font and media licences/credits remain operative.
-Newly supplied Forge-covered game changes need an identifiable release boundary.
+The owner confirms substantial upgrades since the games' first licensed releases.
+Forge is the release policy for covered Titans Forge-controlled material,
+including upgrades not already granted under other terms. Retaining a legacy
+notice does not automatically MIT-license future additions. Newly supplied
+Forge-covered game changes need an identifiable release boundary.
 The restricted policy is source-available, not an OSI-approved open-source licence.
 
-Eight other catalog games do not yet have listed public source repositories.
+Seven other catalog games do not yet have listed public source repositories.
 This guide does not claim they have been published or migrated. Listed GitHub
 branches have not been certified to match the currently hosted itch builds.
 

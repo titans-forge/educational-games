@@ -56,11 +56,13 @@ class CatalogTests(unittest.TestCase):
         guide = (ROOT / "LICENSING.md").read_text()
         self.assertIn("Titans of Mars remains MIT/open source", guide)
         self.assertIn("Previously MIT-licensed material remains usable and hostable under MIT", guide)
-        self.assertIn("Eight other catalog games do not yet", guide)
+        self.assertIn("Seven other catalog games do not yet", guide)
         for game in self.data["games"]:
             if game["source_url"] is not None:
                 self.assertIn(game["source_url"], guide)
-        self.assertEqual(guide.count("/blob/main/LICENSING.md"), 5)
+        self.assertEqual(guide.count("/blob/main/LICENSING.md"), 6)
+        self.assertIn("upgrades not already granted under other terms", guide)
+        self.assertIn("does not automatically MIT-license future additions", guide)
         self.assertNotIn("/Users/", guide)
         self.assertIn("[Licensing](LICENSING.md)", CATALOG.render(self.data))
 
@@ -74,7 +76,7 @@ class CatalogTests(unittest.TestCase):
         game["source_status"] = "forge_repository"
         game["source_url"] = "https://github.com/titans-forge/ares-strategy-engine"
         self.assertIn("1 related repositories", CATALOG.render(self.data))
-        self.assertIn("5 game source repositories", CATALOG.render(self.data))
+        self.assertIn("6 game source repositories", CATALOG.render(self.data))
 
     def test_completed_war_transfer_scope(self):
         expected = {
@@ -82,6 +84,7 @@ class CatalogTests(unittest.TestCase):
             "titans-of-war-rise-of-rome": "Titans-of-War-Rise-of-Rome",
             "titans-of-war-rome-reconquest": "Titans_of_War_Rome_Reconquest",
             "titans-of-war-civil-war": "Titans_of_War",
+            "titans-of-war-revolution": "Titans-of-War-Revolution",
         }
         games = {game["id"]: game for game in CATALOG.validate(self.data)}
         self.assertEqual(
@@ -92,9 +95,9 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(games[game_id]["source_url"], f"https://github.com/titans-forge/{repository}")
         for game_id in ("titans-of-mars", "ares"):
             self.assertEqual(games[game_id]["source_status"], "existing_personal_repository")
-        self.assertEqual(sum(game["source_status"] == "preparing" for game in games.values()), 8)
+        self.assertEqual(sum(game["source_status"] == "preparing" for game in games.values()), 7)
         self.assertIn("2 related repositories", CATALOG.render(self.data))
-        self.assertIn("4 game source repositories", CATALOG.render(self.data))
+        self.assertIn("5 game source repositories", CATALOG.render(self.data))
 
 
 if __name__ == "__main__":

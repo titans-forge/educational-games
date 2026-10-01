@@ -4,14 +4,14 @@ Play on itch. Discover the source, discuss the ideas, and help improve the games
 
 [Play the collection](https://titans-forge.itch.io/) · [Educator guide](EDUCATOR_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [Licensing](LICENSING.md)
 
-This catalog lists 14 browser games. Source publication is being prepared in batches. 2 related repositories currently remain under JCapone83; 4 game source repositories are listed under titans-forge. Listed source branches have not been certified to match the current itch builds.
+This catalog lists 14 browser games. Source publication is being prepared in batches. 2 related repositories currently remain under JCapone83; 5 game source repositories are listed under titans-forge. Listed source branches have not been certified to match the current itch builds.
 
 ## History and civics
 
 | Game | Explore | Play | Source |
 | --- | --- | --- | --- |
 | Crossroads: The Silk Roads | Explore trade and historical connections along the Silk Roads. | [Play](https://titans-forge.itch.io/crossroads-the-silk-roads) | Being prepared |
-| Titans of War: Revolution | Balance command, logistics, political legitimacy, and alliances during the American Revolution. | [Play](https://titans-forge.itch.io/titans-of-war-revolution) | Being prepared |
+| Titans of War: Revolution | Balance command, logistics, political legitimacy, and alliances during the American Revolution. | [Play](https://titans-forge.itch.io/titans-of-war-revolution) | [Source](https://github.com/titans-forge/Titans-of-War-Revolution) |
 | Titans of War: Caesar | Explore Roman leadership and strategic trade-offs through historical gameplay. | [Play](https://titans-forge.itch.io/titans-of-war-caesar) | Being prepared |
 | Titans of War: Rise of Rome | Explore early Rome and the choices involved in building a republic. | [Play](https://titans-forge.itch.io/titans-of-war-rise-of-rome) | [Source](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome) |
 | Titans of War: Ashes of Nika | Rebuild Constantinople after the Nika revolt while balancing recovery, factions, finances, and imperial commitments. | [Play](https://titans-forge.itch.io/titans-of-war-ashes-of-nika) | [Source](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika) |
