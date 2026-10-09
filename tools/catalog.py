@@ -45,6 +45,10 @@ def validate(data):
             parsed = urlsplit(source or "")
             if parsed.scheme != "https" or parsed.netloc != "github.com" or parsed.query or parsed.fragment or not re.fullmatch(r"/" + owner + r"/[A-Za-z0-9_.-]+", parsed.path):
                 raise ValueError("source URL does not match declared owner")
+        mirror = game.get("github_play_url")
+        if mirror is not None:
+            if status != "forge_repository" or mirror != f"https://titans-forge.github.io/{urlsplit(source).path.rsplit('/', 1)[-1]}/":
+                raise ValueError("GitHub player does not match the declared Forge repository")
     return games
 
 
@@ -61,7 +65,10 @@ def render(data):
             if game["category"] != category:
                 continue
             source = "Being prepared" if game["source_url"] is None else f"[Source]({game['source_url']})"
-            lines.append(f"| {game['title']} | {game['summary']} | [Play]({game['play_url']}) | {source} |")
+            play = f"[Play]({game['play_url']})"
+            if game.get("github_play_url"):
+                play += f" · [GitHub player]({game['github_play_url']})"
+            lines.append(f"| {game['title']} | {game['summary']} | {play} | {source} |")
         lines += [""]
     lines += ["Medical Mysteries is an exact native-JavaScript recovery of its published beta, not the missing original authoring workspace, generators or test suite. Its README documents that boundary. Proxima's existing charter concerns Luna and Mars, not an actual Proxima mission.", ""]
     lines += ["## Use thoughtfully", "", "Games simplify history, ecosystems, settlement engineering, and medical reasoning. Their scores are game models, not validated scientific measurements, demonstrated learning outcomes, operational instructions, or clinical recommendations. Discuss assumptions and compare scenarios with appropriate sources.", "", "Check each game's page for controls, accessibility, save behavior, and requirements. Do not submit personal information, student records, real medical cases, or browser-save exports in public issues.", "", "## Source and media", "", "This repository is a catalog, not a bundle of all game assets. See [the game licensing guide](LICENSING.md) for Forge Game Hosting License 1.0, preserved MIT grants, and the Titans of Mars exception. Each game retains its own release checkpoints and media-rights notices. Public visibility or a free play link does not grant blanket redistribution rights. Screenshots are intentionally omitted until a specific selection is cleared.", "", "## Maintaining the catalog", "", "`games.json` is the source of truth. Run `python3 tools/catalog.py --write` after an approved inventory change, then `python3 -m unittest discover -s tests` and `python3 tools/catalog.py --check`. Network and browser gameplay checks are separate release steps.", "", f"Inventory prepared {data['inventory_date']}. Titles and play links were reconciled against the public itch profile; new GitHub destinations are not claimed until publication is verified.", ""]

@@ -28,6 +28,23 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             CATALOG.validate(self.data)
 
+    def test_github_player_matches_source(self):
+        game = next(g for g in self.data['games'] if g['id'] == 'titans-of-war-civil-war')
+        game['github_play_url'] = 'https://titans-forge.github.io/Titans_of_War/'
+        self.assertIn('[GitHub player](https://titans-forge.github.io/Titans_of_War/)', CATALOG.render(self.data))
+
+    def test_foreign_github_player_rejected(self):
+        game = next(g for g in self.data['games'] if g['id'] == 'titans-of-war-civil-war')
+        game['github_play_url'] = 'https://titans-forge.github.io.evil.example/Titans_of_War/'
+        with self.assertRaises(ValueError):
+            CATALOG.validate(self.data)
+
+    def test_wrong_github_player_repository_rejected(self):
+        game = next(g for g in self.data['games'] if g['id'] == 'titans-of-war-civil-war')
+        game['github_play_url'] = 'https://titans-forge.github.io/other-game/'
+        with self.assertRaises(ValueError):
+            CATALOG.validate(self.data)
+
     def test_unpublished_source_rejected(self):
         game = self.data["games"][0]
         game["source_status"] = "preparing"

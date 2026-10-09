@@ -17,7 +17,7 @@ This catalog lists 14 browser games. All fourteen games now have listed public r
 | Titans of War: Ashes of Nika | Rebuild Constantinople after the Nika revolt while balancing recovery, factions, finances, and imperial commitments. | [Play](https://titans-forge.itch.io/titans-of-war-ashes-of-nika) | [Source](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika) |
 | Titans of War: Rome Reconquest | Explore the strategic pressures of Roman reconquest campaigns. | [Play](https://titans-forge.itch.io/titans-of-war-rome-reconquest) | [Source](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest) |
 | Build a Republic | Explore constitutional choices and the compromises involved in forming a republic. | [Play](https://titans-forge.itch.io/republic) | [Source](https://github.com/titans-forge/Build-a-Republic) |
-| Titans of War: Civil War | Explore command and strategic choices during the American Civil War. | [Play](https://titans-forge.itch.io/titans-of-war-civil-war) | [Source](https://github.com/titans-forge/Titans_of_War) |
+| Titans of War: Civil War | Civil War campaign and battlefield command; browser build 0.31.0 / v44, updated October 8, 2026. | [Play](https://titans-forge.itch.io/titans-of-war-civil-war) · [GitHub player](https://titans-forge.github.io/Titans_of_War/) | [Source](https://github.com/titans-forge/Titans_of_War) |
 
 ## Nature
 
