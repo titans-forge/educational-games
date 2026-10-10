@@ -23,7 +23,7 @@ This catalog lists 14 browser games. All fourteen games now have listed public r
 
 | Game | Explore | Play | Source |
 | --- | --- | --- | --- |
-| Titans of Nature: Living Waters | Explore aquatic environments through a fishing and field-observation game. | [Play](https://titans-forge.itch.io/living-waters) | [Source](https://github.com/titans-forge/Titans-of-Nature-Living-Waters) |
+| Titans of Nature: Living Waters | Fifteen living waters with realistic fish motion, field decisions and a shared journal; version 1.14.0, updated October 10, 2026. | [Play](https://titans-forge.itch.io/living-waters) · [GitHub player](https://titans-forge.github.io/Titans-of-Nature-Living-Waters/) | [Source](https://github.com/titans-forge/Titans-of-Nature-Living-Waters) |
 
 ## Space and science
 
