@@ -90,6 +90,11 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(approved).hexdigest(),
                          "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf")
 
+    def test_new_reference_license_is_exact_owner_approved_text(self):
+        approved = (ROOT / "FORGE-GAME-LICENSE-2.0.txt").read_bytes()
+        self.assertEqual(hashlib.sha256(approved).hexdigest(),
+                         "01c53180ca78bee80411c2d07e436014b62f7e48dd37de70c2fed72238ee57dc")
+
     def test_verified_transfer_can_be_recorded(self):
         game = self.data["games"][12]
         game["source_status"] = "existing_personal_repository"

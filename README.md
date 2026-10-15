@@ -23,7 +23,7 @@ This catalog lists 14 browser games. All fourteen games now have listed public r
 
 | Game | Explore | Play | Source |
 | --- | --- | --- | --- |
-| Titans of Nature: Living Waters | Fifteen living waters with realistic fish motion, field decisions and a shared journal; version 1.14.0, updated October 10, 2026. | [Play](https://titans-forge.itch.io/living-waters) · [GitHub player](https://titans-forge.github.io/Titans-of-Nature-Living-Waters/) | [Source](https://github.com/titans-forge/Titans-of-Nature-Living-Waters) |
+| Titans of Nature: Living Waters | Fifteen living waters with realistic fish motion, field decisions and a shared journal; gameplay version 1.15.0; Forge 2.0 packaging updated October 15, 2026. | [Play](https://titans-forge.itch.io/living-waters) · [GitHub player](https://titans-forge.github.io/Titans-of-Nature-Living-Waters/) | [Source](https://github.com/titans-forge/Titans-of-Nature-Living-Waters) |
 
 ## Space and science
 
@@ -50,7 +50,7 @@ Check each game's page for controls, accessibility, save behavior, and requireme
 
 ## Source and media
 
-This repository is a catalog, not a bundle of all game assets. See [the game licensing guide](LICENSING.md) for Forge Game Hosting License 1.0, preserved MIT grants, and the Titans of Mars exception. Each game retains its own release checkpoints and media-rights notices. Public visibility or a free play link does not grant blanket redistribution rights. Screenshots are intentionally omitted until a specific selection is cleared.
+This repository is a catalog, not a bundle of all game assets. See [the game licensing guide](LICENSING.md) for Forge Game License 2.0, independent commercial-hosting and AI-training conditions, preserved earlier grants, and per-game adoption scope. Each game retains its own release checkpoints and media-rights notices. Public visibility or a free play link does not grant blanket redistribution rights. Screenshots are intentionally omitted until a specific selection is cleared.
 
 ## Maintaining the catalog
 

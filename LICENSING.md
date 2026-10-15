@@ -1,106 +1,44 @@
 # Game licensing
 
-Updated September 30, 2026.
+Updated October 15, 2026.
 
-## Current policy and Titans of Mars exception
+## Current policy: Forge Game License 2.0
 
-**Titans of Mars remains MIT/open source.** Its repository, licence, history and
-current release were not changed in this rollout:
-[Titans of Mars](https://github.com/JCapone83/Titans-of-Mars).
+The owner-approved [Forge Game License 2.0](FORGE-GAME-LICENSE-2.0.txt) adds an AI-training condition alongside the independent public-hosting condition. Companies and other legal entities with gross annual revenue strictly **over US$1,000,000**, including controlled subsidiaries as defined in the full terms, need separate written permission for **either public hosting or AI training on qualifying new covered material**. Qualifying private/internal training, fine-tuning, distillation and intended training datasets are included. There is no automatic educational-institution exemption. Ordinary play, private classroom play and AI assistance without training remain permitted as defined in the complete policy. Applicable statutory rights remain intact.
 
-The other 13 games' September 30 licensing-only itch.io editions carry
-[Forge Game Hosting License 1.0](FORGE-GAME-HOSTING-LICENSE-1.0.txt), with all
-earlier permission grants and separately licensed media preserved.
-Their pages and supplied release checkpoints identify the affected editions.
+This is source-available licensing, not an OSI-approved open-source license. The policy covers identified qualifying new contributions and upgrades not already granted under other terms. No new version, filename, archive hash or website notice withdraws previous permissions. This licensing-only rollout changes notices and packaging, not gameplay or media. It does not retroactively impose an AI-training condition on already supplied game material.
 
-For newly covered material, a company with gross annual revenue **over
-US$1,000,000**, including its controlled subsidiaries, needs a separate written
-agreement to publicly host its own playable copy. Ordinary playing, private
-internal/classroom use, official links and authorized platform-served embeds are
-excluded as defined in the full terms. Companies at or below the threshold do
-not need that separate hosting agreement under these community terms.
-[Commercial inquiries](https://titans-forge.itch.io/).
+**Previously MIT-licensed material remains usable and hostable under MIT.** An older MIT release does not automatically MIT-license future additions. Earlier Forge 1.0 and 1.1 permissions, including Proxima's earlier institutional provisions, and third-party/media/platform permissions likewise remain available for their material. Public-domain and unprotectable material retain their status. The exact earlier license texts and affected notices are preserved in each new package and the source history.
 
-## Published GitHub source repositories
+## Per-game release scope
 
-The following thirteen game repositories now identify Forge Game Hosting License
-1.0 as their current project policy. Each includes a licensing checkpoint.
-Where an original root MIT notice was identified, it is retained byte-for-byte
-as `LICENSE-LEGACY-MIT.txt`. No notice is fabricated where one was not found;
-that absence does not establish that no earlier permission grant exists.
+All fourteen catalog games now have public source links. Thirteen GitHub source repositories identify Forge 2.0 for qualifying new contributions. The newer itch packaging editions are identified separately from unchanged gameplay versions. A package's preserved in-game credits can still describe the earlier game's grants; the new root notices and offline licensing page explain the prospective policy.
 
-| Game | Source licensing checkpoint | Adoption commit |
+**Titans of Mars remains MIT/open source for its previously published gameplay.** Its existing repository is still under JCapone83. The owner has deferred the prepared Forge 2.0 source adoption; its current source license remains MIT. Its new itch packaging notices adopt Forge 2.0 only for qualifying newly supplied notice/page expression; the existing game's MIT permissions remain available. No repository transfer or new exclusivity is claimed.
+
+| Game | Current source policy or preserved source | Licensing edition |
 | --- | --- | --- |
-| Ares: The Mars Survival Simulator | [FG-LIC-20260930-12-GH1](https://github.com/titans-forge/ares-strategy-engine/blob/main/LICENSING.md) | [a91cecc](https://github.com/titans-forge/ares-strategy-engine/commit/a91ceccf8d11fc9d1293be8a317b94499743dbad) |
-| Titans of War: Civil War | [FG-LIC-20260930-13-GH1](https://github.com/titans-forge/Titans_of_War/blob/main/LICENSING.md) | [bbece6a](https://github.com/titans-forge/Titans_of_War/commit/bbece6a6db8b97274bf0f0a74d776609dfd64e85) |
-| Titans of War: Rome Reconquest | [FG-LIC-20260930-10-GH1](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/blob/main/LICENSING.md) | [8224b14](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/commit/8224b1475860e3d40ec975496e58521b2c47429f) |
-| Titans of War: Ashes of Nika | [FG-LIC-20260930-09-GH1](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/blob/main/LICENSING.md) | [2582c6d](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/commit/2582c6ddc4cecd46de24e76292df554994703272) |
-| Titans of War: Rise of Rome | [FG-LIC-20260930-07-GH1](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/blob/main/LICENSING.md) | [d767f1f](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/commit/d767f1fedbc927e4e1809e90b8f5e3f2eeafe72e) |
-| Titans of War: Revolution | [FG-LIC-20260930-04-GH1](https://github.com/titans-forge/Titans-of-War-Revolution/blob/main/LICENSING.md) | [56c0729](https://github.com/titans-forge/Titans-of-War-Revolution/commit/56c07290c27fa15267653d60c438114d9b53b3d2) |
-| Titans of Nature: Living Waters | [FG-LIC-20260930-01-GH1](https://github.com/titans-forge/Titans-of-Nature-Living-Waters/blob/main/LICENSING.md) | [bb02c40](https://github.com/titans-forge/Titans-of-Nature-Living-Waters/commit/bb02c404d945d7ca1afbb642983619aeb750a2c3) |
-| Titans of Luna | [FG-LIC-20260930-08-GH1](https://github.com/titans-forge/Titans-of-Luna/blob/main/LICENSING.md) | [dc9cdbd](https://github.com/titans-forge/Titans-of-Luna/commit/dc9cdbdbf511eae7100ce66e337c99d927125f15) |
-| Build a Republic | [FG-LIC-20260930-11-GH1](https://github.com/titans-forge/Build-a-Republic/blob/main/LICENSING.md) | [8980008](https://github.com/titans-forge/Build-a-Republic/commit/8980008f498522e4f8d2aa897777000d493a9713) |
-| Crossroads: The Silk Roads | [FG-LIC-20260930-02-GH1](https://github.com/titans-forge/Crossroads-The-Silk-Roads/blob/main/LICENSING.md) | [f8f196c](https://github.com/titans-forge/Crossroads-The-Silk-Roads/commit/f8f196ca05565cf432f7a45f13469411f88a5d74) |
-| Titans of War: Caesar | [FG-LIC-20260930-06-GH1](https://github.com/titans-forge/Titans-of-War-Caesar/blob/main/LICENSING.md) | [e5b4409](https://github.com/titans-forge/Titans-of-War-Caesar/commit/e5b4409d8881f6301ec9888cf59ad5691a9bf18f) |
-| Titans of Proxima | [FG-LIC-20260930-03-GH1](https://github.com/titans-forge/Titans-of-Proxima/blob/main/LICENSING.md) | [f89f578](https://github.com/titans-forge/Titans-of-Proxima/commit/f89f578ba1f85efdca999f8be97487616dc702b0) |
-| Medical Mysteries (published beta recovery) | [FG-LIC-20260930-05-GH1](https://github.com/titans-forge/Medical-Mysteries/blob/main/LICENSING.md) | [e012405](https://github.com/titans-forge/Medical-Mysteries/commit/e0124052a8d77b50b21d67797267a7314cebc5cb) |
+| Titans of Nature: Living Waters | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-Nature-Living-Waters/blob/main/LICENSING.md) | `FG2-LIVING-WATERS-20261015` |
+| Crossroads: The Silk Roads | [Forge 2.0 scope](https://github.com/titans-forge/Crossroads-The-Silk-Roads/blob/main/LICENSING.md) | `FG2-CROSSROADS-THE-SILK-ROADS-20261015` |
+| Titans of Proxima | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-Proxima/blob/main/LICENSING.md) | `FG2-TITANS-OF-PROXIMA-20261015` |
+| Titans of War: Revolution | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-War-Revolution/blob/main/LICENSING.md) | `FG2-TITANS-OF-WAR-REVOLUTION-20261015` |
+| Medical Mysteries | [Forge 2.0 scope](https://github.com/titans-forge/Medical-Mysteries/blob/main/LICENSING.md) | `FG2-MEDICAL-MYSTERIES-20261015` |
+| Titans of War: Caesar | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-War-Caesar/blob/main/LICENSING.md) | `FG2-TITANS-OF-WAR-CAESAR-20261015` |
+| Titans of War: Rise of Rome | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-War-Rise-of-Rome/blob/main/LICENSING.md) | `FG-ROME-0.34.1-20261015` |
+| Titans of Luna | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-Luna/blob/main/LICENSING.md) | `FG2-TITANS-OF-LUNA-20261015` |
+| Titans of Mars | [Earlier MIT source](https://github.com/JCapone83/Titans-of-Mars) — source adoption deferred by owner; existing game retains MIT | `FG2-TITANS-OF-MARS-20261015` |
+| Titans of War: Ashes of Nika | [Forge 2.0 scope](https://github.com/titans-forge/Titans-of-War-Ashes-of-Nika/blob/main/LICENSING.md) | `FG2-TITANS-OF-WAR-ASHES-OF-NIKA-20261015` |
+| Titans of War: Rome Reconquest | [Forge 2.0 scope](https://github.com/titans-forge/Titans_of_War_Rome_Reconquest/blob/main/LICENSING.md) | `FG2-TITANS-OF-WAR-ROME-RECONQUEST-20261015` |
+| Build a Republic | [Forge 2.0 scope](https://github.com/titans-forge/Build-a-Republic/blob/main/LICENSING.md) | `FG2-BUILD-A-REPUBLIC-20261015` |
+| Ares: The Mars Survival Simulator | [Forge 2.0 scope](https://github.com/titans-forge/ares-strategy-engine/blob/main/LICENSING.md) | `FG2-ARES-20261015` |
+| Titans of War: Civil War | [Forge 2.0 scope](https://github.com/titans-forge/Titans_of_War/blob/main/LICENSING.md) | `FG2-TITANS-OF-WAR-CIVIL-WAR-20261015` |
 
-These four Titans of War repositories completed native GitHub transfers to
-`titans-forge` on September 30, 2026. Repository identity, existing history,
-tags, release assets and licensing checkpoint files were verified unchanged at
-transfer. Current source links use the Forge locations; historical checkpoint
-records retain the owner name recorded when the checkpoint was created.
-Ares subsequently completed its native transfer to Titans Forge, with the same
-repository identity, head/tree, tags and licensing files verified before canonical
-metadata updates. Titans of Mars was not transferred or relicensed. Revolution's clean upgraded-edition source was
-subsequently published with the owner's approval, under the Forge release
-policy. Its migration adds no gameplay changes: the upgrades preceded this
-publication. All 65 original application/media members were verified against
-the recorded itch build; licensing notices were checked separately.
+## Preserved history and distribution
 
-Living Waters 1.4.0, Luna and Build a Republic 0.1.0 were subsequently published
-as clean, history-free source exports. All selected original gameplay and media
-files remained unchanged; comparisons with the recorded itch archives matched
-58/58, 7/7 and 3/3 application/media members respectively. Luna's revised README
-is documentation, not part of the 7-member gameplay/media comparison. Licensing
-and dependency notices were checked separately. These are bounded artifact
-comparisons, not a claim that every source branch or future itch upload matches.
-Crossroads 0.3.1 and Caesar 0.2.0 were then published after the owner confirmed
-that the relevant generated images were made through the owner's Titans
-Forge-controlled OpenAI/Codex account. Each source export retains that public
-attestation without private generation transcripts or invented generation dates.
-Their original application/media comparisons matched 13/13 and 37/37 members
-respectively. Provider terms and procedural-atlas notices remain separate;
-the attestation is not an independent copyright certification.
-Proxima 1.0.0 was then published from its located original source. All 21/21
-application/media members matched the recorded itch archive after a clean build.
-Medical Mysteries was published as an exact native-JavaScript recovery of its
-September 13 v2 beta; 92/92 original archive members remain unchanged, including
-its credits and historical release manifest. Its original authoring workspace,
-case JSONL inputs, generators and tests were not recovered. New static checks are
-packaging/syntax checks, not original tests or clinical validation. Synthetic art
-and the AI-audited/not independently clinically reviewed notices remain explicit.
+[Earlier catalog licensing guide](docs/licensing-history/LICENSING-before-20261015-FORGE-2.0.md) records the September 30 rollout and source-recovery boundaries. The exact [Forge Game Hosting License 1.0](FORGE-GAME-HOSTING-LICENSE-1.0.txt) remains available. Original public source commits, tags and release assets are retained. The newest packages preserve any replaced root notices under `licenses/prior-release/` and retain all original game/media bytes. The per-repository checkpoints identify the source commit, original archive and new contribution scope.
 
-**Previously MIT-licensed material remains usable and hostable under MIT.**
-This policy/documentation change does not retroactively revoke those grants,
-make identical MIT code exclusive, or introduce a gameplay upgrade. Existing
-copyright, third-party, font and media licences/credits remain operative.
-The owner confirms substantial upgrades since the games' first licensed releases.
-Forge is the release policy for covered Titans Forge-controlled material,
-including upgrades not already granted under other terms. Retaining a legacy
-notice does not automatically MIT-license future additions. Newly supplied
-Forge-covered game changes need an identifiable release boundary.
-The restricted policy is source-available, not an OSI-approved open-source licence.
+This catalog does not bundle all game assets or certify every source branch to match its hosted game. Civil War's current v44 browser edition is newer than its main source branch; the licensing-only browser package preserves v44. Medical Mysteries remains a recovery of its published beta, not an original authoring workspace or a clinical product; its case JSONL inputs, generators and tests were not recovered. Read each release's scope and media-rights record.
 
-All fourteen catalog games now have listed public repositories. Thirteen are under
-Titans Forge; Titans of Mars remains at its intentionally unchanged MIT repository. Exact comparisons
-above refer to frozen recorded archives, not every current or future hosted build.
+Existing itch distribution authorizations remain intact. Forge can separately authorize an Apple edition with compatible player terms for material it controls, preserving earlier and third-party grants. No Apple agreement or submission is part of this rollout. Distribution permission is not itself AI-training permission over qualifying newly covered material.
 
-## Scope of this catalog
-
-This repository is a collection directory and educator guide, not a bundle of
-playable copies or a blanket licence for every game, dependency or asset.
-The supplied Forge text is a reference for the identified game releases, not an
-automatic re-licensing of this catalog or unrelated Forge projects.
-Read the individual game's release checkpoint and media-rights records before
-redistribution. Earlier releases, notices and tags retain their original terms.
+Separate hosting or training permission comes only from a written agreement with Titans Forge LLC specifying the activity and material. These community terms set no fee. [Licensing inquiries](https://titans-forge.itch.io/).
