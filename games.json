@@ -80,9 +80,10 @@
       "title": "Titans of Mars",
       "category": "Space and science",
       "play_url": "https://titans-forge.itch.io/titans-of-mars",
-      "summary": "Explore the resource and infrastructure trade-offs of a settlement on Mars.",
-      "source_url": "https://github.com/JCapone83/Titans-of-Mars",
-      "source_status": "existing_personal_repository"
+      "summary": "Settlement engineering with rover and EVA activity, construction stages and regional terrain; version 0.4.0, released October 15, 2026.",
+      "source_url": "https://github.com/titans-forge/Titans-of-Mars",
+      "source_status": "forge_repository",
+      "source_history_url": "https://github.com/JCapone83/Titans-of-Mars"
     },
     {
       "id": "titans-of-war-ashes-of-nika",

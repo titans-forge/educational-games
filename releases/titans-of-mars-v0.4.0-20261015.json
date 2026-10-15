@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "game_id": "titans-of-mars",
+  "gameplay_version": "0.4.0",
+  "licensing_edition": "FG2-TITANS-OF-MARS-V0.4.0-20261015",
+  "prepared_date": "2026-10-15",
+  "publication_status": "published",
+  "source_url": "https://github.com/titans-forge/Titans-of-Mars",
+  "source_history_url": "https://github.com/JCapone83/Titans-of-Mars",
+  "play_url": "https://titans-forge.itch.io/titans-of-mars",
+  "release_commit": "d47b66d87deb3b9ef28d0d2200ddde3f0d5b7d83",
+  "release_url": "https://github.com/titans-forge/Titans-of-Mars/releases/tag/v0.4.0",
+  "github_published_at": "2026-10-15T23:52:31Z",
+  "github_release_id": 414382412,
+  "github_release_asset_count": 6,
+  "edition_published": {
+    "github": true,
+    "itch": true
+  },
+  "itch_upload_ids": {
+    "browser": 19790184,
+    "download": 19790185,
+    "source": 19790183,
+    "licensing": 19790182
+  },
+  "live_player_smoke_status": "pending_separate_verification",
+  "license": {
+    "name": "Forge Game License 2.0",
+    "canonical_file": "FORGE-GAME-LICENSE-2.0.txt",
+    "canonical_sha256": "01c53180ca78bee80411c2d07e436014b62f7e48dd37de70c2fed72238ee57dc",
+    "scope": "Only identified qualifying new Licensor-controlled v0.4.0 upgrade expression, as specified by the release licensing checkpoint and rights notices.",
+    "preserved_permissions": "Earlier MIT, Forge 1.0/1.1, third-party, public-domain and platform permissions remain available for the material to which they apply; version and packaging changes do not revoke or narrow those grants."
+  },
+  "historical_rollout_record": "LICENSE_ROLLOUT_20261015.json",
+  "notes": "The Forge-owned fork is the current source destination. The public GitHub release identifies the exact source commit; six native asset digests matched the local release packages. The public itch page and persisted browser/download/source/licensing assignments were verified. Earlier uploads remain recoverable and original source history is retained. These publication receipts do not establish completion of the separate live-player smoke test."
+}

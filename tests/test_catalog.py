@@ -99,12 +99,12 @@ class CatalogTests(unittest.TestCase):
         game = self.data["games"][12]
         game["source_status"] = "existing_personal_repository"
         game["source_url"] = "https://github.com/JCapone83/ares-strategy-engine"
-        self.assertIn("2 related repositories", CATALOG.render(self.data))
-        self.assertIn("12 game source repositories", CATALOG.render(self.data))
+        self.assertIn("1 listed primary source repository is under JCapone83", CATALOG.render(self.data))
+        self.assertIn("13 listed primary source repositories are under titans-forge", CATALOG.render(self.data))
         game["source_status"] = "forge_repository"
         game["source_url"] = "https://github.com/titans-forge/ares-strategy-engine"
-        self.assertIn("1 related repositories", CATALOG.render(self.data))
-        self.assertIn("13 game source repositories", CATALOG.render(self.data))
+        self.assertIn("All 14 listed primary source repositories are under titans-forge", CATALOG.render(self.data))
+        self.assertIn("original source-history repositories are retained where linked", CATALOG.render(self.data))
 
     def test_completed_source_publication_scope(self):
         expected = {
@@ -121,6 +121,7 @@ class CatalogTests(unittest.TestCase):
             "titans-of-proxima": "Titans-of-Proxima",
             "medical-mysteries": "Medical-Mysteries",
             "ares": "ares-strategy-engine",
+            "titans-of-mars": "Titans-of-Mars",
         }
         games = {game["id"]: game for game in CATALOG.validate(self.data)}
         self.assertEqual(
@@ -129,11 +130,31 @@ class CatalogTests(unittest.TestCase):
         )
         for game_id, repository in expected.items():
             self.assertEqual(games[game_id]["source_url"], f"https://github.com/titans-forge/{repository}")
-        for game_id in ("titans-of-mars",):
-            self.assertEqual(games[game_id]["source_status"], "existing_personal_repository")
         self.assertEqual(sum(game["source_status"] == "preparing" for game in games.values()), 0)
-        self.assertIn("1 related repositories", CATALOG.render(self.data))
-        self.assertIn("13 game source repositories", CATALOG.render(self.data))
+        self.assertIn("All 14 listed primary source repositories are under titans-forge", CATALOG.render(self.data))
+        self.assertIn("original source-history repositories are retained where linked", CATALOG.render(self.data))
+
+    def test_mars_upgrade_publication_preserves_scope_and_player_qa_boundary(self):
+        game = next(game for game in self.data["games"] if game["id"] == "titans-of-mars")
+        record = json.loads((ROOT / "releases/titans-of-mars-v0.4.0-20261015.json").read_text())
+        guide = (ROOT / "LICENSING.md").read_text()
+        self.assertEqual(game["source_history_url"], "https://github.com/JCapone83/Titans-of-Mars")
+        self.assertEqual(record["gameplay_version"], "0.4.0")
+        self.assertEqual(record["licensing_edition"], "FG2-TITANS-OF-MARS-V0.4.0-20261015")
+        self.assertEqual(record["publication_status"], "published")
+        self.assertEqual(record["release_commit"], "d47b66d87deb3b9ef28d0d2200ddde3f0d5b7d83")
+        self.assertEqual(record["release_url"], "https://github.com/titans-forge/Titans-of-Mars/releases/tag/v0.4.0")
+        self.assertEqual(record["github_published_at"], "2026-10-15T23:52:31Z")
+        self.assertEqual(record["github_release_asset_count"], 6)
+        self.assertTrue(record["edition_published"]["github"])
+        self.assertTrue(record["edition_published"]["itch"])
+        self.assertEqual(record["itch_upload_ids"], {"browser": 19790184, "download": 19790185, "source": 19790183, "licensing": 19790182})
+        self.assertEqual(record["live_player_smoke_status"], "pending_separate_verification")
+        self.assertEqual(record["source_url"], game["source_url"])
+        self.assertEqual(record["source_history_url"], game["source_history_url"])
+        self.assertIn("version 0.4.0, released October 15, 2026", game["summary"])
+        self.assertIn("qualifying new Licensor-controlled upgrade expression", guide)
+        self.assertNotIn("source adoption deferred", guide)
 
     def test_medical_recovery_and_proxima_scope_are_explicit(self):
         rendered = CATALOG.render(self.data)

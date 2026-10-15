@@ -58,7 +58,13 @@ def render(data):
     forge_count = sum(g["source_status"] == "forge_repository" for g in games)
     preparing_count = sum(g["source_status"] == "preparing" for g in games)
     publication = "Source publication is being prepared in batches." if preparing_count else "All fourteen games now have listed public repositories; recovery scope varies by game."
-    lines = ["# Titans Forge educational games", "", "Play on itch. Discover the source, discuss the ideas, and help improve the games here.", "", "[Play the collection](https://titans-forge.itch.io/) · [Educator guide](EDUCATOR_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [Licensing](LICENSING.md)", "", f"This catalog lists 14 browser games. {publication} {personal_count} related repositories currently remain under JCapone83; {forge_count} game source repositories are listed under titans-forge. Listed source branches have not been certified to match every future or currently hosted itch build.", ""]
+    if not personal_count and not preparing_count:
+        ownership = f"All {forge_count} listed primary source repositories are under titans-forge; original source-history repositories are retained where linked."
+    else:
+        personal_noun = "repository is" if personal_count == 1 else "repositories are"
+        forge_noun = "repository is" if forge_count == 1 else "repositories are"
+        ownership = f"{personal_count} listed primary source {personal_noun} under JCapone83; {forge_count} listed primary source {forge_noun} under titans-forge. Original source-history repositories are retained where linked."
+    lines = ["# Titans Forge educational games", "", "Play on itch. Discover the source, discuss the ideas, and help improve the games here.", "", "[Play the collection](https://titans-forge.itch.io/) · [Educator guide](EDUCATOR_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [Licensing](LICENSING.md)", "", f"This catalog lists 14 browser games. {publication} {ownership} Listed source branches have not been certified to match every future or currently hosted itch build.", ""]
     for category in CATEGORIES:
         lines += [f"## {category}", "", "| Game | Explore | Play | Source |", "| --- | --- | --- | --- |"]
         for game in games:

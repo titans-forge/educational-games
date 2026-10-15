@@ -4,7 +4,7 @@ Play on itch. Discover the source, discuss the ideas, and help improve the games
 
 [Play the collection](https://titans-forge.itch.io/) · [Educator guide](EDUCATOR_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [Licensing](LICENSING.md)
 
-This catalog lists 14 browser games. All fourteen games now have listed public repositories; recovery scope varies by game. 1 related repositories currently remain under JCapone83; 13 game source repositories are listed under titans-forge. Listed source branches have not been certified to match every future or currently hosted itch build.
+This catalog lists 14 browser games. All fourteen games now have listed public repositories; recovery scope varies by game. All 14 listed primary source repositories are under titans-forge; original source-history repositories are retained where linked. Listed source branches have not been certified to match every future or currently hosted itch build.
 
 ## History and civics
 
@@ -31,7 +31,7 @@ This catalog lists 14 browser games. All fourteen games now have listed public r
 | --- | --- | --- | --- |
 | Titans of Proxima | Manage a fictional Earth-Luna-Mars charter through infrastructure, research and launch windows. | [Play](https://titans-forge.itch.io/titans-of-proxima) | [Source](https://github.com/titans-forge/Titans-of-Proxima) |
 | Titans of Luna | Build a lunar colony while balancing power, water, oxygen, food, and crew survival. | [Play](https://titans-forge.itch.io/titans-of-luna) | [Source](https://github.com/titans-forge/Titans-of-Luna) |
-| Titans of Mars | Explore the resource and infrastructure trade-offs of a settlement on Mars. | [Play](https://titans-forge.itch.io/titans-of-mars) | [Source](https://github.com/JCapone83/Titans-of-Mars) |
+| Titans of Mars | Settlement engineering with rover and EVA activity, construction stages and regional terrain; version 0.4.0, released October 15, 2026. | [Play](https://titans-forge.itch.io/titans-of-mars) | [Source](https://github.com/titans-forge/Titans-of-Mars) |
 | Ares: The Mars Survival Simulator | Explore survival and resource management on Mars; distinct from Titans of Mars. | [Play](https://titans-forge.itch.io/ares-the-mars-survival-simulator) | [Source](https://github.com/titans-forge/ares-strategy-engine) |
 
 ## Medical reasoning
