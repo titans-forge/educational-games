@@ -23,7 +23,7 @@
     "source": 19790183,
     "licensing": 19790182
   },
-  "live_player_smoke_status": "pending_separate_verification",
+  "live_player_smoke_status": "passed",
   "license": {
     "name": "Forge Game License 2.0",
     "canonical_file": "FORGE-GAME-LICENSE-2.0.txt",
@@ -32,5 +32,69 @@
     "preserved_permissions": "Earlier MIT, Forge 1.0/1.1, third-party, public-domain and platform permissions remain available for the material to which they apply; version and packaging changes do not revoke or narrow those grants."
   },
   "historical_rollout_record": "LICENSE_ROLLOUT_20261015.json",
-  "notes": "The Forge-owned fork is the current source destination. The public GitHub release identifies the exact source commit; six native asset digests matched the local release packages. The public itch page and persisted browser/download/source/licensing assignments were verified. Earlier uploads remain recoverable and original source history is retained. These publication receipts do not establish completion of the separate live-player smoke test."
+  "notes": "The Forge-owned fork is the current source destination. The public GitHub release identifies the exact source commit; six native asset digests matched the local release packages. The public itch page and persisted browser/download/source/licensing assignments were verified. Earlier uploads remain recoverable and original source history is retained. The public player passed the bounded viewport, focus and zoom checks recorded here while preserving the prior paused Sol 1 save without advancing gameplay. One itch-host orientation-lock error was observed; physical Safari and physical touch devices remain untested.",
+  "live_player_smoke": {
+    "public_browser_upload_id": 19790184,
+    "public_iframe_upload_confirmed": true,
+    "launch_mode": "Click to launch in fullscreen",
+    "itch_maximized_player": true,
+    "viewport_checks": [
+      {
+        "viewport_width": 359,
+        "viewport_height": 907,
+        "iframe_width": 359,
+        "iframe_height": 907,
+        "iframe_matches_viewport": true
+      },
+      {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "iframe_width": 1280,
+        "iframe_height": 900,
+        "iframe_matches_viewport": true
+      }
+    ],
+    "focus_selected_working": true,
+    "zoom_percent_verified": 180,
+    "prior_save_preserved": {
+      "paused": true,
+      "sol": 1,
+      "gameplay_advanced": false
+    },
+    "console_clean": false,
+    "observed_host_error": {
+      "origin": "itch host",
+      "message": "screen.orientation.lock unsupported",
+      "game_remained_usable": true
+    },
+    "untested": [
+      "Physical Safari",
+      "Physical touch devices"
+    ]
+  },
+  "itch_public_download_verification": {
+    "page": "https://titans-forge.itch.io/titans-of-mars",
+    "verifiedAt": "2026-10-16T00:01:57.556282+00:00",
+    "method": "Actual public-page browser downloads followed by full-file SHA-256 comparison",
+    "files": [
+      {
+        "name": "Titans-of-Mars-v0.4.0-forge2-licensing.txt",
+        "bytes": 39625,
+        "sha256": "2475f5061e66466dcb5f5ed7d8103d8da97c17f55c6683e824c947874ad1b124",
+        "matchesPublishedRelease": true
+      },
+      {
+        "name": "Titans-of-Mars-v0.4.0-forge2-download.zip",
+        "bytes": 52676698,
+        "sha256": "81bec87881903f5c7d39c92f6b0db8a4a5cf8a80f67c7a033881503e0f80f7e2",
+        "matchesPublishedRelease": true
+      },
+      {
+        "name": "Titans-of-Mars-v0.4.0-forge2-source.zip",
+        "bytes": 56972592,
+        "sha256": "d3db8c424fbb4a42f006a13c12551926e6f0311cb333271bf5979020208dc1fa",
+        "matchesPublishedRelease": true
+      }
+    ]
+  }
 }

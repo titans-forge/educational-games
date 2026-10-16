@@ -149,7 +149,41 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(record["edition_published"]["github"])
         self.assertTrue(record["edition_published"]["itch"])
         self.assertEqual(record["itch_upload_ids"], {"browser": 19790184, "download": 19790185, "source": 19790183, "licensing": 19790182})
-        self.assertEqual(record["live_player_smoke_status"], "pending_separate_verification")
+        smoke_status = record["live_player_smoke_status"]
+        self.assertIn(smoke_status, {"pending_separate_verification", "passed"})
+        if smoke_status == "passed":
+            smoke = record["live_player_smoke"]
+            self.assertEqual(smoke["public_browser_upload_id"], record["itch_upload_ids"]["browser"])
+            self.assertTrue(smoke["public_iframe_upload_confirmed"])
+            self.assertTrue(smoke["launch_mode"])
+            self.assertIsInstance(smoke["itch_maximized_player"], bool)
+            self.assertGreaterEqual(len(smoke["viewport_checks"]), 2)
+            for viewport in smoke["viewport_checks"]:
+                self.assertGreater(viewport["viewport_width"], 0)
+                self.assertGreater(viewport["viewport_height"], 0)
+                self.assertEqual(viewport["iframe_width"], viewport["viewport_width"])
+                self.assertEqual(viewport["iframe_height"], viewport["viewport_height"])
+                self.assertTrue(viewport["iframe_matches_viewport"])
+            self.assertTrue(smoke["focus_selected_working"])
+            self.assertGreaterEqual(smoke["zoom_percent_verified"], 100)
+            self.assertLessEqual(smoke["zoom_percent_verified"], 220)
+            self.assertTrue(smoke["prior_save_preserved"]["paused"])
+            self.assertFalse(smoke["prior_save_preserved"]["gameplay_advanced"])
+            self.assertIsInstance(smoke["console_clean"], bool)
+            if not smoke["console_clean"]:
+                self.assertTrue(smoke["observed_host_error"]["origin"])
+                self.assertTrue(smoke["observed_host_error"]["message"])
+                self.assertTrue(smoke["observed_host_error"]["game_remained_usable"])
+            self.assertIsInstance(smoke["untested"], list)
+            downloads = record["itch_public_download_verification"]
+            self.assertTrue(downloads["verifiedAt"])
+            self.assertEqual(downloads["page"], game["play_url"])
+            self.assertGreaterEqual(len(downloads["files"]), 3)
+            for download in downloads["files"]:
+                self.assertTrue(download["name"])
+                self.assertGreater(download["bytes"], 0)
+                self.assertRegex(download["sha256"], r"^[0-9a-f]{64}$")
+                self.assertTrue(download["matchesPublishedRelease"])
         self.assertEqual(record["source_url"], game["source_url"])
         self.assertEqual(record["source_history_url"], game["source_history_url"])
         self.assertIn("version 0.4.0, released October 15, 2026", game["summary"])
